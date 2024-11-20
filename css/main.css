@@ -1,0 +1,111 @@
+@import 'media.css';
+@import 'reset.css';
+@import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+
+
+
+
+body{
+  color: #3A3845;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, sans-serif;
+
+}
+
+ul{
+  list-style-type: none;
+}
+
+.container {
+  width: 1680px;
+  margin: 0 auto;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+
+
+/* ----------------------Header-------------------- */
+
+.header {
+  background: linear-gradient(167deg,#42D2A6 4.7%, #007991 95.98% ) #389196;
+
+
+}
+
+.header__container {
+  display: flex;
+  padding: 0px 64px;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__name {
+  font-size: 69px;
+  font-weight: 400;
+  text-align: left;
+ 
+
+}
+.header__navigation {
+}
+.header__list {
+  display: flex;
+  gap:60px ;
+  
+}
+.heder__list-item {
+  font-size: 30px;
+}
+/* ----------------------------Main-------------------------------- */
+
+
+/* ----------------------------Form-------------------------------- */
+
+
+.main{
+  background: linear-gradient(167deg,#42D2A6 4.7%, #007991 95.98% ) #389196;
+  height: 1400px;
+  padding-top: 130px;
+}
+
+.main__container {
+
+}
+
+.main__search{
+  display: flex;
+  justify-content: center;
+}
+.form {
+  display: flex;                     
+  width: 700px;                      
+  height: 70px;                   
+  border-radius: 25px;              
+  background-color: rgba(217, 217, 217, 1); 
+  overflow: hidden;   
+  gap: 17px;               
+}
+
+.form__input {
+  flex-grow: 1;                      
+  background-color: rgba(217, 217, 217, 1);
+  border: none;                      
+  font-size: 30px;                  
+  outline: none;                     /* Убираем стандартный контур при фокусе */
+}
+
+.form__button {
+  background-color: rgba(217, 217, 217, 1); 
+  border: none;                                          
+  cursor: pointer;   
+  margin-left: 40px;
+}
+
+.form__button img {
+  width: 45px;
+  height: auto;                       
+}
+
+
