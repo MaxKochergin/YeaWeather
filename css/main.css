@@ -11,6 +11,7 @@ body{
   line-height: 1.5;
   font-weight: 500;
   font-family: 'Inter', system-ui, sans-serif;
+  background: rgba(0, 0, 0, 0.8);
 
 }
 
@@ -30,24 +31,25 @@ ul{
 /* ----------------------Header-------------------- */
 
 .header {
-  background: rgba(0, 0, 0, 0.8);
 
 }
 
 .header__container {
   display: flex;
-  padding: 0px 64px;
+
   align-items: center;
   justify-content: space-between;
+  height: auto;
 }
 .header__name {
   font-size: 69px;
   font-weight: 400;
-  text-align: left;
+  
   color: white;
 }
 
 .header__navigation {
+  
 }
 .header__list {
   display: flex;
@@ -66,12 +68,12 @@ ul{
 
 
 .main{
-  height: 1400px;
-  padding-top: 100px;
-  background-color: rgba(37, 35, 35, 1);
 }
 
 .main__container {
+  /* background-color: rgba(37, 35, 35, 1); */
+  padding-top: 100px;
+  height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,7 +130,7 @@ ul{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 .weather__city {
   display: flex;
@@ -173,3 +175,47 @@ ul{
 }
 
 
+/*------------------------------------- wether-scroll------------------------------ */
+.weather-time {
+  
+}
+.weather-time__slider {
+
+  padding-bottom: 25px;
+  display: flex;
+  overflow-x:auto; 
+  gap: 50px;
+}
+
+.weather-time__slider::-webkit-scrollbar{
+  /* width: 8px; */
+  height: 10px;
+}
+.weather-time__slider::-webkit-scrollbar-thumb {
+  background: rgba(66, 210, 166, 0.7); /* Цвет скроллбара */
+  border-radius: 4px; /* Скругление углов */
+}
+
+.weather-time__slider::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* Фон трека скроллбара */
+}
+.weather-time__item {
+  border-radius: 25px;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(167deg,#42D2A6 4.7%, #007991 95.98% ) #389196;
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+.weather-time__item img{
+  height: 68px;
+}
+.time {
+}
+.temp {
+}
