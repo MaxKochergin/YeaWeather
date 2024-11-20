@@ -6,7 +6,7 @@
 
 
 body{
-  color: #3A3845;
+  color: white;
   font-size: 20px;
   line-height: 1.5;
   font-weight: 500;
@@ -30,8 +30,7 @@ ul{
 /* ----------------------Header-------------------- */
 
 .header {
-  background: linear-gradient(167deg,#42D2A6 4.7%, #007991 95.98% ) #389196;
-
+  background: rgba(0, 0, 0, 0.8);
 
 }
 
@@ -45,14 +44,16 @@ ul{
   font-size: 69px;
   font-weight: 400;
   text-align: left;
- 
-
+  color: white;
 }
+
 .header__navigation {
 }
 .header__list {
   display: flex;
   gap:60px ;
+  color: white;
+
   
 }
 .heder__list-item {
@@ -65,18 +66,22 @@ ul{
 
 
 .main{
-  background: linear-gradient(167deg,#42D2A6 4.7%, #007991 95.98% ) #389196;
   height: 1400px;
-  padding-top: 130px;
+  padding-top: 100px;
+  background-color: rgba(37, 35, 35, 1);
 }
 
 .main__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
-.main__search{
+.search{
   display: flex;
   justify-content: center;
+  margin-bottom: 53px;
 }
 .form {
   display: flex;                     
@@ -106,6 +111,65 @@ ul{
 .form__button img {
   width: 45px;
   height: auto;                       
+}
+
+/* ------------------------------------Weather-------------------- */
+
+.weather {
+  width: 870px;
+  height: 405px;
+  padding: 15px 35px;
+  background: linear-gradient(167deg,#42D2A6 4.7%, #007991 95.98% ) #389196;
+  border-radius: 25px;
+
+
+}
+.weather__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+}
+.weather__city {
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  font-size: 70px;
+  padding-bottom: 30px;
+}
+.weather__content {
+  width: 800px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.weather__img-term {
+}
+.weather__temp {
+  font-size: 70px;
+  font-weight: 300;
+}
+.weather__img-sky{
+ 
+}
+.weather__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.weather__details-1 {
+}
+.weather__title {
+}
+.value {
+}
+.weather__details-2 {
+}
+.weather__details-3 {
+}
+.weather__details-4 {
 }
 
 
