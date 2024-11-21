@@ -1,0 +1,186 @@
+@import 'reset.css';
+@import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+
+
+body{
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: rgba(0, 0, 0, 0.8);
+  
+  }
+  
+  ul{
+    list-style-type: none;
+  }
+  img {
+    max-width: 100px; /* Изображение подгоняется под ширину блока */
+    max-height: 100%; /* Изображение подгоняется под высоту блока */
+    object-fit: contain; /* Сохраняет пропорции изображения, чтобы оно полностью помещалось */
+  }
+  
+  .container {
+    width: 1680px;
+    margin: 0 auto;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  
+  
+  
+  /* ----------------------Header-------------------- */
+  
+  .header {
+  
+  }
+  
+  .header__container {
+    display: flex;
+  
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+  }
+  .header__name {
+    font-size: 69px;
+    font-weight: 400;
+    
+    color: white;
+  }
+  
+  .header__navigation {
+    
+  }
+  .header__list {
+    display: flex;
+    gap:60px ;
+    color: white;
+  
+    
+  }
+  
+  
+  
+  .header__list-item a {
+    font-size: 30px;
+    padding: 5px 10px;
+    text-decoration: none; /* Убираем стандартное подчеркивание */
+    border-bottom: 3px solid transparent; /* Линия изначально прозрачная */
+    color: white; /* Цвет текста по умолчанию */
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .header__list-item a:hover {
+    color: #42D2A6; /* Цвет текста при наведении */
+    border-bottom-color: white; /* Подсвечиваем при наведении */
+  }
+  
+  .header__list-item a.active {
+    border-bottom: 3px solid white; /* Устанавливаем белую линию для активного элемента */
+    color: #42D2A6; /* Цвет текста активного элемента */
+  }
+  
+  
+  .week{
+    
+  }
+  /* ----------------------------Main-------------------------------- */
+  
+  
+  /* ----------------------------Form-------------------------------- */
+  
+  
+  .main{
+  }
+  
+  .main__container {
+    /* background-color: rgba(37, 35, 35, 1); */
+    padding-top: 100px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  
+  .search{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 253px;
+  }
+  .form {
+    display: flex;                     
+    width: 700px;                      
+    height: 70px;                   
+    border-radius: 25px;              
+    background-color: rgba(217, 217, 217, 1); 
+    overflow: hidden;   
+    gap: 17px;               
+  }
+  
+  .form__input {
+    flex-grow: 1;                      
+    background-color: rgba(217, 217, 217, 1);
+    border: none;                      
+    font-size: 30px;                  
+    outline: none;                     /* Убираем стандартный контур при фокусе */
+  }
+  
+  .form__button {
+    background-color: rgba(217, 217, 217, 1); 
+    border: none;                                          
+    cursor: pointer;   
+    margin-left: 40px;
+  }
+  
+  .form__button img {
+    width: 45px;
+    height: auto;                       
+  }
+  
+  /* ------------------------------------Weather-------------------- */
+  
+  .week {
+    display: flex;
+    gap: 50px;
+  }
+
+  .weather {
+    width: 350px;
+    height: 250px;
+    background: linear-gradient(167deg,#42D2A6 4.7%, #007991 95.98% ) #389196;
+    border-radius: 25px;
+  
+  
+  }
+  .weather__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: space-around;
+  }
+  .weather__city {
+    display: flex;
+    justify-content: center;
+    /* width: 800px; */
+    font-size: 50px;
+    padding-bottom: 30px;
+  }
+  .weather__content {
+    /* width: 800px; */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .weather__img-term {
+  }
+  .weather__temp {
+    font-size: 50px;
+    font-weight: 300;
+  }
+
+
+  

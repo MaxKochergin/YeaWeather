@@ -18,6 +18,11 @@ body{
 ul{
   list-style-type: none;
 }
+img {
+  max-width: 100px; /* Изображение подгоняется под ширину блока */
+  max-height: 100%; /* Изображение подгоняется под высоту блока */
+  object-fit: contain; /* Сохраняет пропорции изображения, чтобы оно полностью помещалось */
+}
 
 .container {
   width: 1680px;
@@ -58,8 +63,31 @@ ul{
 
   
 }
-.heder__list-item {
+
+
+
+.header__list-item a {
   font-size: 30px;
+  padding: 5px 10px;
+  text-decoration: none; /* Убираем стандартное подчеркивание */
+  border-bottom: 3px solid transparent; /* Линия изначально прозрачная */
+  color: white; /* Цвет текста по умолчанию */
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.header__list-item a:hover {
+  color: #42D2A6; /* Цвет текста при наведении */
+  border-bottom-color: white; /* Подсвечиваем при наведении */
+}
+
+.header__list-item a.active {
+  border-bottom: 3px solid white; /* Устанавливаем белую линию для активного элемента */
+  color: #42D2A6; /* Цвет текста активного элемента */
+}
+
+
+.week{
+  
 }
 /* ----------------------------Main-------------------------------- */
 
@@ -79,7 +107,9 @@ ul{
   align-items: center;
 
 }
-
+.preview{
+  justify-content: center;
+}
 .search{
   display: flex;
   justify-content: center;
@@ -116,15 +146,15 @@ ul{
 }
 
 /* ------------------------------------Weather-------------------- */
-
+.none{
+  display: none;
+}
 .weather {
   width: 870px;
   height: 405px;
   padding: 15px 35px;
   background: linear-gradient(167deg,#42D2A6 4.7%, #007991 95.98% ) #389196;
   border-radius: 25px;
-
-
 }
 .weather__info {
   display: flex;
@@ -156,6 +186,7 @@ ul{
  
 }
 .weather__details {
+  font-size: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -175,7 +206,16 @@ ul{
 }
 
 
-/*------------------------------------- wether-scroll------------------------------ */
+
+/*------------------------------------- Footer wether-scroll------------------------------ */
+.none{
+  display: none;
+
+}
+.footer{
+  
+  margin-top: 100px;
+}
 .weather-time {
   
 }
@@ -200,9 +240,10 @@ ul{
   background: rgba(0, 0, 0, 0.1); /* Фон трека скроллбара */
 }
 .weather-time__item {
+  padding: 5px;
   border-radius: 25px;
   width: 120px;
-  height: 120px;
+  height: 140px;
   background: linear-gradient(167deg,#42D2A6 4.7%, #007991 95.98% ) #389196;
   font-size: 17px;
   display: flex;

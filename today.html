@@ -13,24 +13,24 @@
             <div class="header__name">YeaWeather</div>
             <nav class="header__navigation">
                 <ul class="header__list">
-                    <li class="heder__list-item">Today</li>
-                    <li class="heder__list-item">Week Forecast</li>
-                    <li class="heder__list-item">Monthly Forecast</li>
+                    <li class="header__list-item"><a href="today.html" class="active">Today</a></li>
+                    <li class="header__list-item"><a href="week.html" class="link-week">Five days Forecast</a></li>
+                    <li class="header__list-item"><a href="month.html" class="link-month">Monthly Forecast</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <!-- main -->
     <main class="main">
-        <div class="container main__container">
-            <section class="search">
+        <div class="container main__container preview">
+            <section class="search ">
                 <form action="" class="form" id="form">
                     <button class="form__button"><img src="images/icon_search.svg" alt="Search"></button>
-                    <input type="text" class="form__input" placeholder="Search location...">
+                    <input type="text" id="input" class="form__input" placeholder="Search location...">
                 </form>
             </section>
 
-            <section class="weather">
+            <section class="weather none">
                 <div class="weather__info">
                     <div class="weather__city">London</div>
                     <div class="weather__content">
@@ -39,28 +39,28 @@
                         </div>
                         <div class="weather__temp">27°C</div>
                         <div class="weather__img-sky">
-                            <img src="images/cloudy.svg" alt="Cloudy">
+                            <img src="images/clear.png" class="img-sky" alt="Cloudy">
                         </div>
                     </div>
-                    <div class="weaher__day">Aug 23,  Tue</div>
+                    
 
                 </div>
                 <div class="weather__details">
                     <div class="weather__details-1">
-                        <div class="weather__title">Humidity</div>
-                        <div class="value">99%</div>
+                        <div class="weather__title-hum">Humidity</div>
+                        <div class="value-hum">99%</div>
                     </div>
-                    <div class="weather__details-2">
-                        <div class="weather__title">Visiblity</div>
-                        <div class="value">8 km</div>
+                    <div class="weather__details-vis">
+                        <div class="weather__title-vis">Visiblity</div>
+                        <div class="value-vis">8 km</div>
                     </div>
-                    <div class="weather__details-3">
+                    <div class="weather__details-press">
                         <div class="weather__title">Air Pressure</div>
-                        <div class="value">1005 hPa</div>
+                        <div class="value-press">1005 hPa</div>
                     </div>
-                    <div class="weather__details-4">
+                    <div class="weather__details-wind">
                         <div class="weather__title">Wind</div>
-                        <div class="value">2 mph</div>
+                        <div class="value-wind">2 km/h</div>
                     </div>
                 </div>
             </section>
@@ -73,131 +73,131 @@
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer none">
         <div class="container footer__container">
 
             <section class="weather-time">
                 <div class="weather-time__slider">
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/cloudyMin.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/Thunderstorm.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/ThunderstormRain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/cloudSun.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
     
     
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     <div class="weather-time__item">
                         <div class="time">19:00 pm</div>
-                        <img src="images/rain.svg" alt="Rain">
+                        <img src="images/drizzle.png" alt="Rain">
                         <div class="temp">29°</div>
                     </div>
                     
