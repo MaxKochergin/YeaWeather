@@ -3,7 +3,18 @@ const input = document.querySelector('#input');
 
 const myID = "1e4f0f4d21cd1885b6ac9acd4740a729";
 
+document.addEventListener('DOMContentLoaded', () => {
+    const savedCity = localStorage.getItem('city');
+    if (savedCity) {
+        input.value = savedCity; // Вставляем сохраненный город в поле ввода
+        getCityWeather(savedCity); // Загружаем погоду для сохраненного города
+    }
+});
+
+
 form.addEventListener('submit',submitHandler);
+
+
 async function submitHandler(e) {
     e.preventDefault();
 
@@ -13,33 +24,38 @@ async function submitHandler(e) {
     }
 
     const cityName = input.value.trim();
+    
+    localStorage.setItem('city', cityName);
+
     input.value = '';
 
 
+    await getCityWeather(cityName);
+
+}
+
+async function getCityWeather(cityName) {
     const cityData = await getGeoData(cityName);
 
-    if(cityData.length === 0){
-        return
+    if (cityData.length === 0) {
+        return;
     }
 
-    let lon = cityData[0].lon;
-    let lat = cityData[0].lat;
+    const lon = cityData[0].lon;
+    const lat = cityData[0].lat;
 
+    const weatherInfo = await getWeather(lat, lon);
 
-    const weatherInfo = await getWeather(lat,lon);
-
-    if(weatherInfo.length === 0){
-        return
+    if (weatherInfo.length === 0) {
+        return;
     }
 
     const weatherData = {
         name:weatherInfo.city.name,
     }
-    console.log(weatherInfo)
 
     putWeatherInfo(weatherInfo,weatherData);
 }
-
 
 async function getGeoData(name) {
     const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=${1}&appid=${myID}`;
@@ -69,7 +85,7 @@ function putWeatherInfo(data,dataName){
         }
         return null;
     }).filter(info => info !== null);
-    console.log(fiveDayData)
+    
 
     const cardsWeather = document.querySelectorAll('.weather');
     
@@ -93,9 +109,9 @@ function putWeatherInfo(data,dataName){
         const weatherType = dayDate['weather'][0]['main'];
         if(img){
             if(nameSky[weatherType]){
-                img.src =`images/${nameSky[weatherType]}.png`;
+                img.src =`../images/${nameSky[weatherType]}.png`;
             }else{
-                img.src =`images/question.png`;
+                img.src =`../images/question.png`;
             } 
         }
    

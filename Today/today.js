@@ -3,7 +3,18 @@ const input = document.querySelector('#input');
 
 const myID = "1e4f0f4d21cd1885b6ac9acd4740a729";
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedCity = localStorage.getItem('city');
+    if (savedCity) {
+        input.value = savedCity; // Вставляем сохраненный город в поле ввода
+        getCityWeather(savedCity); // Загружаем погоду для сохраненного города
+    }
+});
+
 form.addEventListener('submit',submitHandler);
+
+
 
 async function submitHandler(e) {
     e.preventDefault();
@@ -14,48 +25,53 @@ async function submitHandler(e) {
     }
 
     const cityName = input.value.trim();
+
+
+    localStorage.setItem('city', cityName);
+
     input.value = '';
 
 
+    await getCityWeather(cityName);
+}
+
+async function getCityWeather(cityName) {
     const cityData = await getGeoData(cityName);
 
-    if(cityData.length === 0){
-        return
+    if (cityData.length === 0) {
+        return;
     }
 
-    let lon = cityData[0].lon;
-    let lat = cityData[0].lat;
+    const lon = cityData[0].lon;
+    const lat = cityData[0].lat;
 
+    const weatherInfo = await getWeather(lat, lon);
 
-    const weatherInfo = await getWeather(lat,lon);
-
-    if(weatherInfo.length === 0){
-        return
+    if (weatherInfo.length === 0) {
+        return;
     }
 
-    const wetherData = {
-        name:weatherInfo.name,
-        temp:weatherInfo.main.temp,
-        wind:weatherInfo.wind.speed,
-        weather:weatherInfo.weather[0]['main'],
-        humidity:weatherInfo.main.humidity,
-        visibility:(weatherInfo.visibility) / 1000,
-        pressure:weatherInfo.main.pressure
-    }
-    console.log(weatherInfo)
+    const weatherData = {
+        name: weatherInfo.name,
+        temp: weatherInfo.main.temp,
+        wind: weatherInfo.wind.speed,
+        weather: weatherInfo.weather[0]['main'],
+        humidity: weatherInfo.main.humidity,
+        visibility: weatherInfo.visibility / 1000,
+        pressure: weatherInfo.main.pressure,
+    };
 
-    putWeatherInfo(wetherData);
-
+    putWeatherInfo(weatherData);
 }
 
 async function getGeoData(name) {
     const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=${1}&appid=${myID}`;
     const response = await fetch(geoUrl);
     const geoData = await response.json();
-    return geoData
+    return geoData;
 }
 
-async function getWeather(lat,lon){
+async function getWeather(lat, lon) {
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=${myID}`;
     const response = await fetch(weatherUrl);
     const weatherData = await response.json();
@@ -96,9 +112,9 @@ function putWeatherInfo(data){
     }
 
     if(nameSky[data.weather]){
-        img.src =`images/${nameSky[data.weather]}.png`;
+        img.src =`../images/${nameSky[data.weather]}.png`;
     }else{
-        img.src =`images/question.png`;
+        img.src =`../images/question.png`;
     }
 }
 
