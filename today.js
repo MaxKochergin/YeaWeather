@@ -65,7 +65,7 @@ async function getWeather(lat,lon){
 function putWeatherInfo(data){
     document.querySelector('.weather').classList.remove('none');
     document.querySelector('.footer').classList.remove('none');
-    document.querySelector('.footer').classList.remove('preview');
+    document.querySelector('.main__container').classList.remove('preview');
 
 
 
@@ -101,3 +101,18 @@ function putWeatherInfo(data){
         img.src =`images/question.png`;
     }
 }
+
+// меняю стиль разделам
+
+// const linkList = document.querySelectorAll('.header__list-item a');
+
+// linkList.forEach((link) => {
+//     link.addEventListener('click', addActive);
+// });
+
+// function addActive(e) {
+//     linkList.forEach((link) => {
+//         link.classList.remove('active');
+//     });
+//     e.currentTarget.classList.add('active'); // Используем e.currentTarget для надежности
+// }

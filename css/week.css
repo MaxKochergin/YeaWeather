@@ -94,7 +94,10 @@ body{
   
   .main{
   }
-  
+  .preview{
+    justify-content: center;
+    margin-top: 200px;
+  }
   .main__container {
     /* background-color: rgba(37, 35, 35, 1); */
     padding-top: 100px;
@@ -142,9 +145,13 @@ body{
   
   /* ------------------------------------Weather-------------------- */
   
-  .week {
+  
+  .fivedays {
     display: flex;
     gap: 50px;
+  }
+  .none{
+    display: none;
   }
 
   .weather {

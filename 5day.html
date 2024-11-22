@@ -13,8 +13,8 @@
             <div class="header__name">YeaWeather</div>
             <nav class="header__navigation">
                 <ul class="header__list">
-                    <li class="header__list-item"><a href="today.html" class="active">Today</a></li>
-                    <li class="header__list-item"><a href="week.html" class="link-week">Five days Forecast</a></li>
+                    <li class="header__list-item"><a href="today.html" class="link-today">Today</a></li>
+                    <li class="header__list-item"><a href="#" class="link-week  active">Five days Forecast</a></li>
                     <li class="header__list-item"><a href="month.html" class="link-month">Monthly Forecast</a></li>
                 </ul>
             </nav>
@@ -22,15 +22,15 @@
     </header>
 
     <main class="main">
-        <div class="container main__container">
+        <div class="container main__container preview ">
             <section class="search">
                 <form action="" class="form" id="form">
                     <button class="form__button"><img src="images/icon_search.svg" alt="Search"></button>
-                    <input type="text" class="form__input" placeholder="Search location...">
+                    <input type="text" id="input" class="form__input" placeholder="Search location...">
                 </form>
             </section>
 
-            <section class="week">
+            <section class="fivedays none" >
                 
                 <section class="weather">
                     <div class="weather__info">
@@ -41,7 +41,7 @@
                             </div>
                             <div class="weather__temp">27°C</div>
                             <div class="weather__img-sky">
-                                <img src="images/drizzle.png" alt="drizzl">
+                                <img src="images/drizzle.png" class="img-sky" alt="drizzl">
                             </div>
                         </div>
                         <div class="weaher__day">Aug 23,  Tue</div>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="weather__temp">27°C</div>
                             <div class="weather__img-sky">
-                                <img src="images/drizzle.png" alt="drizzle">
+                                <img src="images/drizzle.png" class="img-sky" alt="drizzle">
                             </div>
                         </div>
                         <div class="weaher__day">Aug 23,  Tue</div>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="weather__temp">27°C</div>
                             <div class="weather__img-sky">
-                                <img src="images/drizzle.png" alt="drizzle">
+                                <img src="images/drizzle.png" class="img-sky" alt="drizzle">
                             </div>
                         </div>
                         <div class="weaher__day">Aug 23,  Tue</div>
@@ -86,7 +86,7 @@
                             </div>
                             <div class="weather__temp">27°C</div>
                             <div class="weather__img-sky">
-                                <img src="images/drizzle.png" alt="drizzle">
+                                <img src="images/drizzle.png" class="img-sky" alt="drizzle">
                             </div>
                         </div>
                         <div class="weaher__day">Aug 23,  Tue</div>
@@ -101,7 +101,7 @@
                             </div>
                             <div class="weather__temp">27°C</div>
                             <div class="weather__img-sky">
-                                <img src="images/drizzle.png" alt="drizzle">
+                                <img src="images/drizzle.png" class="img-sky" alt="drizzle">
                             </div>
                         </div>
                         <div class="weaher__day">Aug 23,  Tue</div>
@@ -114,6 +114,6 @@
     </main>
     
 
-    <script src="script.js"></script>
+    <script src="5days.js"></script>
 </body>
 </html>
