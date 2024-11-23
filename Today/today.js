@@ -81,10 +81,10 @@ async function getWeather(lat, lon) {
 }
 
 function putWeatherInfo(data){
+    document.querySelector('.main__container').classList.remove('preview');
     document.querySelector('#bg-video').classList.remove('hidden')
     document.querySelector('.weather').classList.remove('none');
     document.querySelector('.footer').classList.remove('none');
-    document.querySelector('.main__container').classList.remove('preview');
 
 
 
