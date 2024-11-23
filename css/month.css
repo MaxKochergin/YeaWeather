@@ -21,17 +21,15 @@ body{
     object-fit: contain; /* Сохраняет пропорции изображения, чтобы оно полностью помещалось */
   }
   
-  .container {
-    width: 1680px;
-    margin: 0 auto;
-    padding-left: 120px;
-    padding-right: 120px;
-  }
+
   
   
   
   /* ----------------------Header-------------------- */
-  
+  .container {
+    width: 1440px;
+    margin: 0 auto;
+  }
   .header {
   
   }
@@ -40,7 +38,7 @@ body{
     display: flex;
   
     align-items: center;
-    justify-content: space-between;
+    gap: 150px;
     height: auto;
   }
   .header__name {
