@@ -21,19 +21,13 @@ body{
     object-fit: contain; /* Сохраняет пропорции изображения, чтобы оно полностью помещалось */
   }
   
-
-  
-  
   
   /* ----------------------Header-------------------- */
   .container {
     width: 1440px;
     margin: 0 auto;
   }
-  .header {
-  
-  }
-  
+
   .header__container {
     display: flex;
   
@@ -48,18 +42,12 @@ body{
     color: white;
   }
   
-  .header__navigation {
-    
-  }
   .header__list {
     display: flex;
     gap:60px ;
     color: white;
-  
-    
   }
-  
-  
+
   
   .header__list-item a {
     font-size: 30px;
@@ -80,21 +68,13 @@ body{
     color: #42D2A6; /* Цвет текста активного элемента */
   }
   
-  
-  .week{
-    
-  }
   /* ----------------------------Main-------------------------------- */
   
   
   /* ----------------------------Form-------------------------------- */
   
   
-  .main{
-  }
-  
   .main__container {
-    /* background-color: rgba(37, 35, 35, 1); */
     padding-top: 100px;
     height: 700px;
     display: flex;
@@ -123,7 +103,7 @@ body{
     background-color: rgba(217, 217, 217, 1);
     border: none;                      
     font-size: 30px;                  
-    outline: none;                     /* Убираем стандартный контур при фокусе */
+    outline: none;                     
   }
   
   .form__button {
@@ -148,14 +128,11 @@ body{
   }
 
   .weather {
-    /* padding: 10px; */
     text-align: center;
     width: 350px;
     height: auto;
     background: linear-gradient(167deg,#42D2A6 4.7%, #007991 95.98% ) #389196;
     border-radius: 25px;
-  
-  
   }
   .weather__info {
     display: flex;
@@ -166,18 +143,13 @@ body{
   .weather__city {
     display: flex;
     justify-content: center;
-    /* width: 800px; */
     font-size: 40px;
-    /* padding-bottom: 10px; */
   }
   .weather__content {
-    /* width: 800px; */
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
-  }
-  .weather__img-term {
   }
   .weather__temp {
     font-size: 40px;

@@ -25,9 +25,6 @@ img {
 }
 
 
-
-
-
 /* ----------------------Header-------------------- */
 
 .container {
@@ -35,13 +32,8 @@ img {
   margin: 0 auto;
 }
 
-.header {
-
-}
-
 .header__container {
   display: flex;
-
   align-items: center;
   gap: 150px;
   height: auto;
@@ -49,22 +41,14 @@ img {
 .header__name {
   font-size: 69px;
   font-weight: 400;
-  
   color: white;
 }
 
-.header__navigation {
-  
-}
 .header__list {
   display: flex;
   gap:60px ;
   color: white;
-  
-  
 }
-
-
 
 .header__list-item a {
   font-size: 30px;
@@ -85,10 +69,6 @@ img {
   color: #42D2A6; /* Цвет текста активного элемента */
 }
 
-
-.week{
-  
-}
 /* ----------------------------Main-------------------------------- */
 
 
@@ -105,8 +85,8 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Видео покрывает весь контейнер */
-  z-index: -1; /* Отправляем видео на задний план */
+  object-fit: cover; 
+  z-index: -1; 
 }
 .hidden{
   display: none;
@@ -115,12 +95,9 @@ img {
 }
 
 .main__container {
-  /* background-color: rgba(37, 35, 35, 1); */
   padding-top: 50px;
   height: 750px;
   display: flex;
- 
-  
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -197,14 +174,10 @@ img {
   justify-content: center;
   align-items: center;
 }
-.weather__img-term {
-}
+
 .weather__temp {
   font-size: 70px;
   font-weight: 300;
-}
-.weather__img-sky{
- 
 }
 .weather__details {
   font-size: 25px;
@@ -213,7 +186,6 @@ img {
   align-items: center;
   text-align: center;
 }
-
 
 
 /*------------------------------------- Footer wether-scroll------------------------------ */
@@ -225,11 +197,7 @@ img {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.weather-time {
-  
-}
 .weather-time__slider {
-
   padding-bottom: 25px;
   display: flex;
   overflow-x:auto; 
@@ -265,11 +233,6 @@ img {
 .weather-time__item img{
   height: 68px;
 }
-.time {
-}
-.temp {
-}
-
 /* адаптив */
 
 @media (max-width: 1500px){
@@ -278,7 +241,6 @@ img {
     width: 1280px;
     margin: 0 auto;
   }
-  
   
   .header__container {
     display: flex;
@@ -333,9 +295,7 @@ img {
   .hidden{
     display: none;
   }
-  .main{
-  }
-  
+
   .main__container {
     height: 650px;
     display: flex;
@@ -344,7 +304,6 @@ img {
     align-items: center;
     position: relative;
     z-index: 1;
-  
   }
   .preview{
     margin-top: 100px;
@@ -416,14 +375,10 @@ img {
     justify-content: center;
     align-items: center;
   }
-  .weather__img-term {
-  }
+
   .weather__temp {
     font-size: 70px;
     font-weight: 300;
-  }
-  .weather__img-sky{
-   
   }
   .weather__details {
     font-size: 25px;
@@ -502,8 +457,7 @@ img {
       width: 500px;
       margin: 0 auto;
     }
-    
-    
+  
     .header__container {
       display: flex;
       align-items: center;
@@ -557,9 +511,6 @@ img {
     .hidden{
       display: none;
     }
-    .main{
-    }
-    
     .main__container {
       height: 500px;
       display: flex;
@@ -603,7 +554,6 @@ img {
       border: none;                                          
       cursor: pointer;   
       margin-left: 40px;
-      
     }
     
     .form__button img {
