@@ -4,11 +4,13 @@ const input = document.querySelector('#input');
 const myID = "1e4f0f4d21cd1885b6ac9acd4740a729";
 
 
+
+// можно было и через sessionStorage, но я в тз localStorage
 document.addEventListener('DOMContentLoaded', () => {
     const savedCity = localStorage.getItem('city');
     if (savedCity) {
-        input.value = savedCity; // Вставляем сохраненный город в поле ввода
-        getCityWeather(savedCity); // Загружаем погоду для сохраненного города
+        input.value = savedCity; 
+        getCityWeather(savedCity); 
     }
 });
 
@@ -79,6 +81,7 @@ async function getWeather(lat, lon) {
 }
 
 function putWeatherInfo(data){
+    document.querySelector('#bg-video').classList.remove('hidden')
     document.querySelector('.weather').classList.remove('none');
     document.querySelector('.footer').classList.remove('none');
     document.querySelector('.main__container').classList.remove('preview');
@@ -116,6 +119,25 @@ function putWeatherInfo(data){
     }else{
         img.src =`../images/question.png`;
     }
+
+
+    const video = document.querySelector('#bg-video');
+
+    const nameVideo = {
+        'Clouds':'clouds',
+        'Clear':'clear',
+        'Mist':'Mist',
+        'Rain':'rain',
+        'Drizzle':'drizzle',
+        'Snow':'snow',
+    }
+
+    if(nameVideo[data.weather]){
+        video.src =`../video/${nameVideo[data.weather]}.mp4`;
+    }else{
+        return
+    }
+    
 }
 
 // меняю стиль разделам

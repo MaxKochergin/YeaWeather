@@ -3,11 +3,13 @@ const input = document.querySelector('#input');
 
 const myID = "1e4f0f4d21cd1885b6ac9acd4740a729";
 
+
+// можно было и через sessionStorage, но я в тз localStorage
 document.addEventListener('DOMContentLoaded', () => {
     const savedCity = localStorage.getItem('city');
     if (savedCity) {
-        input.value = savedCity; // Вставляем сохраненный город в поле ввода
-        getCityWeather(savedCity); // Загружаем погоду для сохраненного города
+        input.value = savedCity; 
+        getCityWeather(savedCity); 
     }
 });
 
@@ -95,7 +97,7 @@ function putWeatherInfo(data,dataName){
         const img = card.querySelector('.img-sky');
         const date = card.querySelector('.weaher__day');
 
-        temp.textContent = dayDate['main']['temp'] + '°C';
+        temp.textContent = Math.round(dayDate['main']['temp']) + '°C';
         
         const nameSky = {
             'Clouds':'clouds',

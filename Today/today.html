@@ -21,56 +21,58 @@
         </div>
     </header>
     <!-- main -->
+
     <main class="main">
-        <div class="container main__container preview">
-            <section class="search ">
-                <form action="" class="form" id="form">
-                    <button class="form__button"><img src="../images/icon_search.svg" alt="Search"></button>
-                    <input type="text" id="input" class="form__input" placeholder="Search location...">
-                </form>
-            </section>
-
-            <section class="weather none">
-                <div class="weather__info">
-                    <div class="weather__city">London</div>
-                    <div class="weather__content">
-                        <div class="weather__img-term">
-                            <img src="../images/thermometer.svg" alt="Cloudy">
+        <div class="container video-bg">
+            <video src="../video/rain.mp4" autoplay muted loop  id="bg-video" class="hidden">
+            </video>
+            <div class="container main__container preview">
+                <section class="search ">
+                    <form action="" class="form" id="form">
+                        <button class="form__button"><img src="../images/icon_search.svg" alt="Search"></button>
+                        <input type="text" id="input" class="form__input" placeholder="Search location...">
+                    </form>
+                </section>
+    
+                <section class="weather none">
+                    <div class="weather__info">
+                        <div class="weather__city">London</div>
+                        <div class="weather__content">
+                            <div class="weather__img-term">
+                                <img src="../images/thermometer.svg" alt="Cloudy">
+                            </div>
+                            <div class="weather__temp">27°C</div>
+                            <div class="weather__img-sky">
+                                <img src="../images/clear.png" class="img-sky" alt="Cloudy">
+                            </div>
                         </div>
-                        <div class="weather__temp">27°C</div>
-                        <div class="weather__img-sky">
-                            <img src="../images/clear.png" class="img-sky" alt="Cloudy">
+                        
+    
+                    </div>
+                    <div class="weather__details">
+                        <div class="weather__details-1">
+                            <div class="weather__title-hum">Humidity</div>
+                            <div class="value-hum">99%</div>
+                        </div>
+                        <div class="weather__details-vis">
+                            <div class="weather__title-vis">Visiblity</div>
+                            <div class="value-vis">8 km</div>
+                        </div>
+                        <div class="weather__details-press">
+                            <div class="weather__title">Air Pressure</div>
+                            <div class="value-press">1005 hPa</div>
+                        </div>
+                        <div class="weather__details-wind">
+                            <div class="weather__title">Wind</div>
+                            <div class="value-wind">2 km/h</div>
                         </div>
                     </div>
-                    
-
-                </div>
-                <div class="weather__details">
-                    <div class="weather__details-1">
-                        <div class="weather__title-hum">Humidity</div>
-                        <div class="value-hum">99%</div>
-                    </div>
-                    <div class="weather__details-vis">
-                        <div class="weather__title-vis">Visiblity</div>
-                        <div class="value-vis">8 km</div>
-                    </div>
-                    <div class="weather__details-press">
-                        <div class="weather__title">Air Pressure</div>
-                        <div class="value-press">1005 hPa</div>
-                    </div>
-                    <div class="weather__details-wind">
-                        <div class="weather__title">Wind</div>
-                        <div class="value-wind">2 km/h</div>
-                    </div>
-                </div>
-            </section>
-
-
-           
+                </section>
+    
+    
+               
+            </div>
         </div>
-
-
-
     </main>
 
     <footer class="footer none">
