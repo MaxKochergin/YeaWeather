@@ -24,55 +24,82 @@ async function submitHandler(e) {
         alert('Enter correct city');
         return
     }
-
     const cityName = input.value.trim();
-    
-    localStorage.setItem('city', cityName);
-
-    input.value = '';
-
-
-    await getCityWeather(cityName);
-
+    localStorage.setItem("city", cityName);
+    input.value = "";
+    try {
+        await getCityWeather(cityName);
+    } catch (error) {
+        console.error("Error in submitHandler:", error);
+        alert("An error occurred while processing your request. Please try again.");
+    }
 }
 
 async function getCityWeather(cityName) {
-    const cityData = await getGeoData(cityName);
+    try {
+        const cityData = await getGeoData(cityName);
 
-    if (cityData.length === 0) {
-        return;
+        if (cityData.length === 0) {
+            return;
+        }
+
+        const lon = cityData[0].lon;
+        const lat = cityData[0].lat;
+
+        const weatherInfo = await getWeather(lat, lon);
+
+        if (weatherInfo.length === 0) {
+            return;
+        }
+
+        const weatherData = {
+            name:weatherInfo.city.name,
+        }
+
+        putWeatherInfo(weatherInfo,weatherData);
+    } catch (error) {
+        console.error("Error in getCityWeather:", error);
+        alert("An error occurred while fetching weather data. Please try again.");
     }
-
-    const lon = cityData[0].lon;
-    const lat = cityData[0].lat;
-
-    const weatherInfo = await getWeather(lat, lon);
-
-    if (weatherInfo.length === 0) {
-        return;
-    }
-
-    const weatherData = {
-        name:weatherInfo.city.name,
-    }
-
-    putWeatherInfo(weatherInfo,weatherData);
 }
 
 async function getGeoData(name) {
-    const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=${1}&appid=${myID}`;
-    const response = await fetch(geoUrl);
-    const geoData = await response.json();
-    return geoData
+    try {
+        const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=1&appid=${myID}`;
+        const response = await fetch(geoUrl);
+
+        if (!response.ok) {
+            throw new Error(`Geocoding API returned status: ${response.status}`);
+        }
+
+        const geoData = await response.json();
+        return geoData;
+    } catch (error) {
+        console.error("Error in getGeoData:", error);
+        alert("Failed to fetch city data. Please check your internet connection or try again.");
+        return [];
+    }
 }
 
 
-async function getWeather(lat,lon){
-    const weatherUrl = `http://api.openweathermap.org/data/2.5/forecast?units=metric&lat=${lat}&lon=${lon}&appid=${myID}`;
-    const response = await fetch(weatherUrl);
-    const weatherData = await response.json();
-    return weatherData;
+async function getWeather(lat, lon) {
+    try {
+        const weatherUrl = `http://api.openweathermap.org/data/2.5/forecast?units=metric&lat=${lat}&lon=${lon}&appid=${myID}`;
+        const response = await fetch(weatherUrl);
+
+        if (!response.ok) {
+            throw new Error(`Weather API returned status: ${response.status}`);
+        }
+
+        const weatherData = await response.json();
+        return weatherData;
+    } catch (error) {
+        console.error("Error in getWeather:", error);
+        alert("Failed to fetch weather data. Please try again later.");
+        return { list: [] };
+    }
 }
+
 
 
 function putWeatherInfo(data,dataName){
@@ -133,16 +160,10 @@ function putWeatherInfo(data,dataName){
 
     })
 
-
     const nameCities = document.querySelectorAll('.weather__city');
 
     nameCities.forEach((city) => {
         city.textContent = dataName.name
     })
-
-
- 
-
-
 }
 
