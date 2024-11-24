@@ -1,0 +1,69 @@
+@import 'reset.css';
+@import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+
+body{
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: rgba(0, 0, 0, 0.8);
+  
+  }
+  
+  ul{
+    list-style-type: none;
+  }
+  img {
+    max-width: 100px; /* Изображение подгоняется под ширину блока */
+    max-height: 100%; /* Изображение подгоняется под высоту блока */
+    object-fit: contain; /* Сохраняет пропорции изображения, чтобы оно полностью помещалось */
+  }
+  
+  
+  /* ----------------------Header-------------------- */
+  .container {
+    width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .header__container {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    height: auto;
+  }
+
+  .header__name {
+    font-size: 69px;
+    font-weight: 400;
+    color: white;
+  }
+
+
+  .header__name a.active {
+    border-bottom: 3px solid white; /* Устанавливаем белую линию для активного элемента */
+    color: #42D2A6; /* Цвет текста активного элемента */
+  }
+  
+  .header__list {
+    display: flex;
+    gap:60px ;
+    color: white;
+  }
+
+  .header__list-item a {
+    font-size: 30px;
+    padding: 5px 10px;
+    text-decoration: none; /* Убираем стандартное подчеркивание */
+    border-bottom: 3px solid transparent; /* Линия изначально прозрачная */
+    color: white; /* Цвет текста по умолчанию */
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+ 
+  
+  .header__list-item a:hover {
+    color: #42D2A6; /* Цвет текста при наведении */
+    border-bottom-color: white; /* Подсвечиваем при наведении */
+  }
+ 

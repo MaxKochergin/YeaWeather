@@ -52,20 +52,25 @@ body{
     padding: 5px 10px;
     text-decoration: none; /* Убираем стандартное подчеркивание */
     border-bottom: 3px solid transparent; /* Линия изначально прозрачная */
-    color: white; /* Цвет текста по умолчанию */
+    color: white; 
     transition: border-color 0.3s ease, color 0.3s ease;
   }
-  
+  .header__name a:hover{
+    color: #42D2A6; /* Цвет текста при наведении */
+    border-bottom-color: white; 
+  }
   .header__list-item a:hover {
     color: #42D2A6; /* Цвет текста при наведении */
-    border-bottom-color: white; /* Подсвечиваем при наведении */
+    border-bottom-color: white; 
   }
+
   
   .header__list-item a.active {
     border-bottom: 3px solid white; /* Устанавливаем белую линию для активного элемента */
     color: #42D2A6; /* Цвет текста активного элемента */
   }
   
+
   /* ----------------------------Main-------------------------------- */
   
   

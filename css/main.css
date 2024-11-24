@@ -49,7 +49,10 @@ img {
   gap:60px ;
   color: white;
 }
-
+.header__name a:hover{
+  color: #42D2A6; /* Цвет текста при наведении */
+  border-bottom-color: white; 
+}
 .header__list-item a {
   font-size: 30px;
   padding: 5px 10px;

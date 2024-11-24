@@ -41,6 +41,10 @@ body{
     
     color: white;
   }
+  .header__name a:hover{
+    color: #42D2A6; /* Цвет текста при наведении */
+    border-bottom-color: white; 
+  }
   
   .header__list {
     display: flex;
