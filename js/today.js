@@ -1,8 +1,9 @@
+const input = document.querySelector('#input');
+const form = document.querySelector('#form');
 
-
-import {removeFourClass,getTodayCityWeather} from '../js/utils.js';
+import {removeClassToday,getTodayCityWeather} from '../js/utils.js';
 import {getTodayGeoData,getTodayWeather,} from '../js/api.js';
-import {nameSky,nameVideo,form,input,myID} from '../js/config.js';
+import {nameSky,nameVideo,myID} from '../js/config.js';
 
 
 form.addEventListener('submit',submitHandler);
@@ -37,12 +38,9 @@ async function submitHandler(e) {
     const cityName = input.value.trim();
     localStorage.setItem("city", cityName);
     input.value = "";
-    try {
-        await getTodayCityWeather(cityName);
-    } catch (error) {
-        console.error("Error in submitHandler:", error);
-        alert("An error occurred while processing your request. Please try again.");
-    }
+    
+    await getTodayCityWeather(cityName);
+    
 }
 
 
@@ -57,7 +55,7 @@ async function submitHandler(e) {
 
 export function putTodayWeatherInfo(data) {
 
-    removeFourClass()
+    removeClassToday()
 
     const nameCity = document.querySelector('.weather__city');
     const temp = document.querySelector('.weather__temp');

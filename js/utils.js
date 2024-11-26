@@ -8,7 +8,7 @@ import {putFiveWeatherInfo} from '../js/fiveDays.js';
 
 
 // -------------------------fiveday
-export function removeTwoClass(){
+export function removeClassFive(){
     document.querySelector('.fivedays').classList.remove('none');
     document.querySelector('.main__container').classList.remove('preview');
 }
@@ -60,7 +60,7 @@ export async function getFiveCityWeather(cityName) {
 
 
 //----------------------today
-export function removeFourClass(){
+export function removeClassToday(){
     document.querySelector('.main__container').classList.remove('preview');
     document.querySelector('#bg-video').classList.remove('hidden');
     document.querySelector('.weather').classList.remove('none');

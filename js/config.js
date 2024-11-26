@@ -23,8 +23,6 @@ export const nameVideo = {
     'Snow': 'snow',
 };
 
-export const form = document.querySelector('#form');
 
-export const input = document.querySelector('#input');
 
 export const myID = "1e4f0f4d21cd1885b6ac9acd4740a729";

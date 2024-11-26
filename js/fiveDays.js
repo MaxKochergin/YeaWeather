@@ -1,8 +1,9 @@
+const input = document.querySelector('#input');
+const form = document.querySelector('#form');
 
-
-import {removeTwoClass,getCurrentDay,getFiveCityWeather} from '../js/utils.js';
+import {removeClassFive,getCurrentDay,getFiveCityWeather} from '../js/utils.js';
 import {getFiveGeoData,getFiveWeather,} from '../js/api.js';
-import {nameSky,form,input,myID,selectedIndexes} from '../js/config.js';
+import {nameSky,myID,selectedIndexes} from '../js/config.js';
 
 form.addEventListener('submit',submitHandler);
 
@@ -29,12 +30,8 @@ async function submitHandler(e) {
     const cityName = input.value.trim();
     localStorage.setItem("city", cityName);
     input.value = "";
-    try {
-        await getFiveCityWeather(cityName);
-    } catch (error) {
-        console.error("Error in submitHandler:", error);
-        alert("An error occurred while processing your request. Please try again.");
-    }
+    
+    await getFiveCityWeather(cityName);
 }
 
 
@@ -46,7 +43,7 @@ async function submitHandler(e) {
 
 export function putFiveWeatherInfo(data,dataName){
 
-    removeTwoClass();
+    removeClassFive();
     
 
     const fiveDayData = data.list.filter((info, index) => selectedIndexes.includes(index));
